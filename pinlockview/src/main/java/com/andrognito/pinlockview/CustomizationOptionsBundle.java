@@ -18,8 +18,17 @@ public class CustomizationOptionsBundle {
     private int deleteButtonSize;
     private boolean showDeleteButton;
     private int deleteButtonPressesColor;
+    private int buttonBackgroundResource;
 
     public CustomizationOptionsBundle() {
+    }
+
+    public int getButtonBackgroundResource() {
+        return buttonBackgroundResource;
+    }
+
+    public void setButtonBackgroundResource(int buttonBackgroundResource) {
+        this.buttonBackgroundResource = buttonBackgroundResource;
     }
 
     public int getTextColor() {

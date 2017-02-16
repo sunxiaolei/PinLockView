@@ -71,11 +71,14 @@ public class PinLockAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if (mCustomizationOptionsBundle != null) {
                 holder.mNumberButton.setTextColor(mCustomizationOptionsBundle.getTextColor());
                 if (mCustomizationOptionsBundle.getButtonBackgroundDrawable() != null) {
-                    if (Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                        holder.mNumberButton.setBackgroundDrawable(mCustomizationOptionsBundle.getButtonBackgroundDrawable());
-                    } else {
-                        holder.mNumberButton.setBackground(mCustomizationOptionsBundle.getButtonBackgroundDrawable());
-                    }
+//                    if (Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+//                        holder.mNumberButton.setBackgroundDrawable(mCustomizationOptionsBundle.getButtonBackgroundDrawable());
+//                    } else {
+//                        holder.mNumberButton.setBackground(mCustomizationOptionsBundle.getButtonBackgroundDrawable());
+//                    }
+                }
+                if (mCustomizationOptionsBundle.getButtonBackgroundResource() != 0) {
+                    holder.mNumberButton.setBackgroundResource(mCustomizationOptionsBundle.getButtonBackgroundResource());
                 }
                 holder.mNumberButton.setTextSize(TypedValue.COMPLEX_UNIT_PX, mCustomizationOptionsBundle.getTextSize());
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(mCustomizationOptionsBundle.getButtonSize(), mCustomizationOptionsBundle.getButtonSize());
